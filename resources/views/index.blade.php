@@ -12,15 +12,6 @@
                         <div class="row">
                             <div class="col-xl-5 col-lg-7 col-md-8">
                                 <div class="hero__text">
-                                    <h6>Bộ sưu tập mùa hè</h6>
-                                    <h2>{{ $banner->name }}</h2>
-                                    <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                        commitment to exceptional quality.</p>
-                                    <a href="{{ route('listProduct') }}"
-                                        class="primary-btn d-flex justify-content-center align-items-center">
-                                        <div>Mua ngay </div>
-                                    </a>
-
                                 </div>
                             </div>
                         </div>
@@ -32,56 +23,193 @@
     <!-- Hero Section End -->
 
     <!-- Banner Section Begin -->
-    <section class="banner spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 offset-lg-4">
-                    <div class="banner__item">
-                        <div class="banner__item__pic">
-                            <img src="{{ asset('storage/img/banner/banner-1.jpg') }}" alt="">
-                        </div>
-                        <div class="banner__item__text">
-                            <h2>Bộ Sưu Tập Quần Áo 2024</h2>
-                            <a href="{{ route('listProduct') }}">Mua ngay</a>
-                        </div>
+    <section class="awe-section-2">
+        <section class="section_polyci">
+            <div class="container">
+                <div class="cusCol-wrap">
+                    <div class="cusCol-item">
+                        <a href="https://shop.highlandscoffee.com.vn/chinh-sach-giao-hang" title="Giao hàng">
+                            <img src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/policy_1.png?1763619821689"
+                                alt="Giao hàng">
+                            <span>Giao hàng</span>
+                        </a>
+                    </div>
+                    <div class="cusCol-item">
+                        <a href="https://shop.highlandscoffee.com.vn/tet2025lacuchungminh"
+                            title="&lt;b&gt;ĐỘC QUYỀN&lt;/b&gt;">
+                            <img src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/policy_2.png?1763619821689"
+                                alt="&lt;b&gt;ĐỘC QUYỀN&lt;/b&gt;">
+                            <span><b>ĐỘC QUYỀN</b></span>
+                        </a>
+                    </div>
+                    <div class="cusCol-item">
+                        <a href="https://shop.highlandscoffee.com.vn/khuyen-mai" title="Bán chạy">
+                            <img src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/policy_3.png?1763619821689"
+                                alt="Bán chạy">
+                            <span>Bán chạy</span>
+                        </a>
+                    </div>
+                    <div class="cusCol-item">
+                        <a href="https://www.highlandscoffee.com.vn/vn/he-thong-cua-hang.html" title="Cửa hàng">
+                            <img src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/policy_4.png?1763619821689"
+                                alt="Cửa hàng">
+                            <span>Cửa hàng</span>
+                        </a>
+                    </div>
+                    <div class="cusCol-item">
+                        <a href="https://www.tiktok.com/@highlandscoffee.shop?is_from_webapp=1&amp;sender_device=pc"
+                            title="Cách pha">
+                            <img src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/policy_5.png?1763619821689"
+                                alt="Cách pha">
+                            <span>Cách pha</span>
+                        </a>
+                    </div>
+                    <div class="cusCol-item">
+                        <a href="https://shop.highlandscoffee.com.vn/lien-he" title="Liên hệ">
+                            <img src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/policy_6.png?1763619821689"
+                                alt="Liên hệ">
+                            <span>Liên hệ</span>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <div class="banner__item banner__item--middle">
-                        <div class="banner__item__pic">
-                            <img src="{{ asset('storage/img/banner/banner-2.jpg') }}" alt="">
-                        </div>
-                        <div class="banner__item__text">
-                            <h2>Phụ Kiện</h2>
-                            <a href="{{ route('listProduct') }}">Mua ngay</a>
+            </div>
+        </section>
+    </section>
+    <!-- Banner Section End -->
+    <section class="awe-section-3">
+        <section class="section_uu_dai">
+            <div class="container">
+                <div class="title_uu_dai">
+                    <b>Voucher và Freeship</b>
+                </div>
+                <div class="list-promotion">
+                    <div class="promotion-item">
+                        <div class="promotion-item__inner">
+                            <a href="" title="&lt;b&gt;Voucher 10K - BẠN MỚI&lt;/b&gt;">
+                                <span class="title"><b>Voucher 10K - BẠN MỚI</b></span>
+                                <span class="content">
+                                    <p style="font-size: 13px; text-decoration: none;"> Nhập mã BANMOI tại mục Thanh toán,
+                                        áp dụng cho đơn từ 299,000đ</p>
+                                </span>
+                            </a>
+                            <div class="copy_discount">
+                                <p class="code_zip">
+                                    BANMOI
+                                </p>
+                                <button class="btn dis_copy_2" data-copy="BANMOI">
+                                    <span>Lưu</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="banner__item banner__item--last">
-                        <div class="banner__item__pic">
-                            <img src="{{ asset('storage/img/banner/banner-3.jpg') }}" alt="">
+
+                    <div class="promotion-item">
+                        <div class="promotion-item__inner">
+                            <a href="" title="&lt;b&gt;Voucher 200K&lt;/b&gt;">
+                                <span class="title"><b>Voucher 200K</b></span>
+                                <span class="content">
+                                    <p style="font-size: 13px; text-decoration: none;"> Nhập mã HL200 mục Thanh Toán, áp
+                                        dụng cho đơn từ 1,999,000đ sản phẩm được chọn</p>
+                                </span>
+                            </a>
+                            <div class="copy_discount">
+                                <p class="code_zip">
+                                    HL200
+                                </p>
+                                <button class="btn dis_copy_2" data-copy="HL200">
+                                    <span>Lưu</span>
+                                </button>
+                            </div>
                         </div>
-                        <div class="banner__item__text">
-                            <h2>Giày Xuân 2024</h2>
-                            <a href="{{ route('listProduct') }}">Mua ngay</a>
+                    </div>
+
+                    <div class="promotion-item">
+                        <div class="promotion-item__inner">
+                            <a href="" title="&lt;b&gt;Voucher 100K&lt;/b&gt;">
+                                <span class="title"><b>Voucher 100K</b></span>
+                                <span class="content">
+                                    <p style="font-size: 13px; text-decoration: none;"> Nhập mã HL100 tại mục Thanh Toán, áp
+                                        dụng cho đơn từ 1,399,000đ sản phẩm được chọn</p>
+                                </span>
+                            </a>
+                            <div class="copy_discount">
+                                <p class="code_zip">
+                                    HL100
+                                </p>
+                                <button class="btn dis_copy_2" data-copy="HL100">
+                                    <span>Lưu</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="promotion-item">
+                        <div class="promotion-item__inner">
+                            <a href="" title="&lt;b&gt;Voucher 25K&lt;/b&gt;">
+                                <span class="title"><b>Voucher 25K</b></span>
+                                <span class="content">
+                                    <p style="font-size: 13px; text-decoration: none;"> Nhập mã HL25 tại mục Thanh Toán, áp
+                                        dụng cho đơn từ 799,000đ toàn bộ sản phẩm</p>
+                                </span>
+                            </a>
+                            <div class="copy_discount">
+                                <p class="code_zip">
+                                    HL25
+                                </p>
+                                <button class="btn dis_copy_2" data-copy="HL25">
+                                    <span>Lưu</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <script>
+            $(document).on('click', '.dis_copy_2', function(e) {
+                e.preventDefault();
+                var copyText = $(this).attr('data-copy');
+                var copyTextarea = document.createElement("textarea");
+                copyTextarea.textContent = copyText;
+                document.body.appendChild(copyTextarea);
+                copyTextarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(copyTextarea);
+                var cur_text = $(this).text();
+                var $cur_btn = $(this);
+                $(this).addClass("disabled");
+                $(this).text("Đã lưu!");
+                $(this).parent().addClass('active');
+                setTimeout(function() {
+                    $cur_btn.removeClass("disabled");
+                    $cur_btn.parent().removeClass('active');
+                    $cur_btn.text(cur_text);
+                }, 2500)
+            })
+        </script>
     </section>
-    <!-- Banner Section End -->
+
+
 
     <!-- Product Section Begin -->
     <section class="product spad">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <span>Sản Phẩm</span>
-                        <h2>Được Quan Tâm Nhất</h2>
+            <div class="row section_flash_sale">
+                <div class="flashsale__header col-12 col-lg-12">
+                    <div class="tt_flase">
+                        <h2 class="heading-bar__title flashsale__title">
+                            <img src="//bizweb.dktcdn.net/100/465/740/themes/884110/assets/icon_flash.png?1763619821689"
+                                alt="FLASH SALE - Chính hãng 100%">
+                            <a class="link" href="flash-sale" title="FLASH SALE - Chính hãng 100%">FLASH SALE - Chính
+                                hãng 100%</a>
+                        </h2>
+                        <span class="flashsale__countdown-label "><span class="ams">|</span></span>
+                        <div class="count-down">
+
+                        </div>
+                        <a class="view_mos" href="flash-sale" title="Xem tất cả">Xem tất cả</a>
                     </div>
+
                 </div>
             </div>
             <div class="row">
@@ -101,7 +229,8 @@
                                                 src="{{ asset('storage/img/icon/compare.png') }}" alt="">
                                             <span>So sánh</span></a></li>
                                     <li><a href="{{ route('detailProduct', $product->id) }}"><img
-                                                src="{{ asset('storage/img/icon/search.png') }}" alt=""><span>Chi tiết</span></a></li>
+                                                src="{{ asset('storage/img/icon/search.png') }}" alt=""><span>Chi
+                                                tiết</span></a></li>
                                 </ul>
                             </div>
                             <div class="product__item__text">

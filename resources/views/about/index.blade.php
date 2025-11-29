@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    Về chúng tôi
+    Giới thiệu
 @endsection
 @section('content')
     <!-- Breadcrumb Section Begin -->
@@ -9,10 +9,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h4>Về chúng tôi</h4>
+                        <h4>Giới thiệu</h4>
                         <div class="breadcrumb__links">
                             <a href="/">Trang chủ</a>
-                            <span>Về chúng tôi</span>
+                            <span>Giới thiệu</span>
                         </div>
                     </div>
                 </div>

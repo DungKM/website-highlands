@@ -79,36 +79,38 @@
         </p>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-3 col-md-3">
-            <div class="header__logo">
-                <a href="/"><img src="{{ asset('storage/img/logo.png') }}" alt=""></a>
+<div class="background-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3" style="display: flex; align-items: center;">
+                <div class="header__logo">
+                    <a href="/"><img src="{{ asset('storage/images/logo.webp') }}" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <nav class="header__menu mobile-menu">
+                    <ul>
+                        <li><a href="/">Trang chủ</a></li>
+                        <li><a href="{{ route('listProduct') }}">Sản phẩm</a></li>
+                        <li><a href="{{ route('listOrder') }}">Đơn hàng</a></li>
+                        <li><a href="{{ route('listBlog') }}">Bài viết</a></li>
+                        <li><a href="{{route('about')}}">Giới thiệu</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="header__nav__option">
+                    {{-- <a href="#" class="search-switch"><img src="{{ asset('storage/img/icon/search.png') }}"
+                            alt=""></a> --}}
+                    <a data-toggle="modal" data-target="#heart" style="cursor: pointer"><img
+                            src="{{ asset('storage/images/heart.png') }}" alt="">
+                    </a>
+                    <a href="{{ route('viewCart') }}"><img src="{{ asset('storage/images/shopping-cart.png') }}" alt="">
+                        <span></span></a>
+                    <div class="price"></div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6">
-            <nav class="header__menu mobile-menu">
-                <ul>
-                    <li><a href="/">Trang chủ</a></li>
-                    <li><a href="{{ route('listProduct') }}">Sản phẩm</a></li>
-                    <li><a href="{{ route('listOrder') }}">Đơn hàng</a></li>
-                    <li><a href="{{ route('listBlog') }}">Bài viết</a></li>
-                    <li><a href="{{route('about')}}">Về chúng tôi</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="col-lg-3 col-md-3">
-            <div class="header__nav__option">
-                {{-- <a href="#" class="search-switch"><img src="{{ asset('storage/img/icon/search.png') }}"
-                        alt=""></a> --}}
-                <a data-toggle="modal" data-target="#heart" style="cursor: pointer"><img
-                        src="{{ asset('storage/img/icon/heart.png') }}" alt="">
-                </a>
-                <a href="{{ route('viewCart') }}"><img src="{{ asset('storage/img/icon/cart.png') }}" alt="">
-                    <span></span></a>
-                <div class="price"></div>
-            </div>
-        </div>
+        <div class="canvas__open"><i class="fa fa-bars"></i></div>
     </div>
-    <div class="canvas__open"><i class="fa fa-bars"></i></div>
 </div>
