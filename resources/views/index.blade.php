@@ -212,13 +212,13 @@
 
                 </div>
             </div>
-            <div class="row">
+            <div class="row mt-3">
                 @foreach ($products as $product)
                     <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
                         <div class="product__item sale">
                             <div class="product__item__pic set-bg"
                                 data-setbg="{{ asset('storage/images/products/' . $product->image->srcImage) }}">
-                                <span class="label">Sale</span>
+                                {{-- <span class="label">Sale</span> --}}
                                 <ul class="product__hover">
                                     <li><a style="cursor: pointer" onclick="add_heart({{ $product->id }})"><img
                                                 src="{{ asset('storage/img/icon/heart.png') }}" alt=""

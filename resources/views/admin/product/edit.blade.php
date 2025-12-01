@@ -39,16 +39,16 @@
                                             <div id="emailHelp" class="text-danger">{{ $message }}</div>
                                         @enderror
                                     </div>
+                                    <div class="mb-3 col-6">
+                                        <label for="exampleInputEmail1" class="form-label">Số lượng</label>
+                                        <input type="text" name="number" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" value="{{ $product->number }}">
+                                        @error('number')
+                                            <div id="emailHelp" class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="mb-3 col-4">
-                                        <label for="exampleInputEmail1" class="form-label">Giới tính</label>
-                                        <select name="gender" id="" class="form-select">
-                                            <option value="1" @selected($product->gender == 1)>Male</option>
-                                            <option value="2" @selected($product->gender == 2)>Female</option>
-                                            <option value="3" @selected($product->gender == 3)>Unisex</option>
-                                        </select>
-                                    </div>
                                     <div class="mb-3 col-4">
                                         <label for="exampleInputEmail1" class="form-label">Phân loại</label>
                                         <select name="category" id="" class="form-select">
@@ -58,14 +58,13 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="mb-3 col-4">
-                                        <label for="exampleInputEmail1" class="form-label">Thương hiệu</label>
-                                        <select name="brand" id="" class="form-select">
-                                            @foreach ($brands as $brand)
-                                                <option value="{{ $brand->id }}" @selected($product->idBrand == $brand->id)>
-                                                    {{ $brand->name }}</option>
-                                            @endforeach
-                                        </select>
+                                     <div class="mb-3 col-4">
+                                        <label for="exampleInputEmail1" class="form-label">Số lượng</label>
+                                        <input type="text" name="number" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" value="{{ $product->number }}">
+                                        @error('number')
+                                            <div id="emailHelp" class="text-danger">{{ $message }}</div>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="mb-3">
@@ -78,39 +77,6 @@
                                     @error('images')
                                         <div id="emailHelp" class="text-danger">{{ $message }}</div>
                                     @enderror
-                                </div>
-                                <label for="exampleInputEmail1" class="form-label">Số lượng size</label>
-                                <div class="row">
-                                    <div class="mb-3 col-2">
-                                        <label for="exampleInputEmail1" class="form-label">S</label>
-                                        <input type="number" name="sizeS" class="form-control" min="0"
-                                            value="{{ $product->size->S }}">
-                                    </div>
-                                    <div class="mb-3 col-2">
-                                        <label for="exampleInputEmail1" class="form-label">M</label>
-                                        <input type="number" name="sizeM" class="form-control" min="0"
-                                            value="{{ $product->size->M }}">
-                                    </div>
-                                    <div class="mb-3 col-2">
-                                        <label for="exampleInputEmail1" class="form-label">L</label>
-                                        <input type="number" name="sizeL" class="form-control" min="0"
-                                            value="{{ $product->size->L }}">
-                                    </div>
-                                    <div class="mb-3 col-2">
-                                        <label for="exampleInputEmail1" class="form-label">XL</label>
-                                        <input type="number" name="sizeXL" class="form-control" min="0"
-                                            value="{{ $product->size->XL }}">
-                                    </div>
-                                    <div class="mb-3 col-2">
-                                        <label for="exampleInputEmail1" class="form-label">2XL</label>
-                                        <input type="number" name="size2XL" class="form-control" min="0"
-                                            value="{{ $product->size->XXL }}">
-                                    </div>
-                                    <div class="mb-3 col-2">
-                                        <label for="exampleInputEmail1" class="form-label">3XL</label>
-                                        <input type="number" name="size3XL" class="form-control" min="0"
-                                            value="{{ $product->size->XXXL }}">
-                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Mô tả</label>

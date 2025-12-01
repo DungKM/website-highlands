@@ -21,7 +21,7 @@ class ProductController extends Controller
         $products = Product::withTrashed()->get();
         // dd($products);
         $images = Image::all();
-        $products->load(['size', 'category', 'brand']);
+        $products->load(['size', 'category']);
         foreach($products as $product){
             //Lấy ra ảnh đầu tiên làm ảnh đại diện cho sản phẩm
             foreach($images as $image){
@@ -29,28 +29,6 @@ class ProductController extends Controller
                     $product->image = $image;
                     break;
                 }
-            }
-            //tính tổng số lượng sản phẩm theo size hiện có
-            $product->number = $product->size->S + $product->size->M + $product->size->L + $product->size->XL + $product->size->XXL + $product->size->XXXL;
-            //hiển thị size đang còn của sản phẩm
-            $product->sizeShow = '';
-            if($product->size->S > 0){
-                $product->sizeShow .= ' S';
-            }
-            if($product->size->M > 0){
-                $product->sizeShow .= ' M';
-            }
-            if($product->size->L > 0){
-                $product->sizeShow .= ' L';
-            }
-            if($product->size->XL > 0){
-                $product->sizeShow .= ' XL';
-            }
-            if($product->size->XXL > 0){
-                $product->sizeShow .= ' XXL';
-            }
-            if($product->size->XXXL > 0){
-                $product->sizeShow .= ' XXXL';
             }
         }
         return view('admin.product.index', compact('products'));
@@ -94,11 +72,11 @@ class ProductController extends Controller
         $data = [
             'name' => $request->name,
             'price' => $request->price,
+            'number' => $request->number,
             'priceSale' => $request->priceSale,
             'gender' => $request->gender,
             'description' => $request->description,
             'idCategory' => $request->category,
-            'idBrand' => $request->brand,
         ];
         Product::create($data);
         //lấy ra id sản phẩm vừa thêm
@@ -111,16 +89,6 @@ class ProductController extends Controller
                 'idProduct' => $idProduct,
             ]);
         }
-        //thêm số lượng sản phẩm theo size
-        Size::create([
-            'S' => $request->sizeS,
-            'M' => $request->sizeM,
-            'L' => $request->sizeL,
-            'XL' => $request->sizeXL,
-            'XXL' => $request->size2XL,
-            'XXXL' => $request->size3XL,
-            'idProduct' => $idProduct,
-        ]);
         toastr()->success('Successfully', 'Added product');
         return redirect()->route('product.index');
     }
@@ -139,7 +107,7 @@ class ProductController extends Controller
         $brands = Brand::all();
         $categories = Category::all();
         $product->load(['size', 'images']);
-        return view('admin.product.edit', compact('product', 'brands', 'categories'));
+        return view('admin.product.edit', compact('product',  'categories'));
     }
 
     /**
@@ -175,19 +143,10 @@ class ProductController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'priceSale' => $request->priceSale,
-            'gender' => $request->gender,
+            'number' => $request->number,
             'description' => $request->description,
             'idCategory' => $request->category,
-            'idBrand' => $request->brand
         ])->save();
-        Size::where('idProduct', $product->id)->update([
-            'S' => $request->sizeS,
-            'M' => $request->sizeM,
-            'L' => $request->sizeL,
-            'XL' => $request->sizeXL,
-            'XXL' => $request->size2XL,
-            'XXXL' => $request->size3XL,
-        ]);
         toastr()->success('Successfully', 'Updated product');
         return redirect()->route('product.index');
     }

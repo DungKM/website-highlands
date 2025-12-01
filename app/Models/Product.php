@@ -14,16 +14,11 @@ class Product extends Model
         'name',
         'price',
         'priceSale',
-        'gender',
+        'number',
         'description',
         'view',
         'idCategory',
-        'idBrand',
     ];
-    
-    public function brand(){
-        return $this->belongsTo(Brand::class, 'idBrand', 'id')->withTrashed();
-    }
     public function category(){
         return $this->belongsTo(Category::class, 'idCategory', 'id')->withTrashed();
     }

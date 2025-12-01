@@ -87,42 +87,6 @@
                             </h3>
 
                             <div class="product__details__option">
-                                <div class="product__details__option__size">
-                                    <form action="{{ route('addToCart', $product->id) }}" method="post">
-                                        @csrf
-                                        @method('POST')
-                                        <span>Size:</span>
-                                        @if ($product->size->XXXL > 0)
-                                            <label for="xxxl">xxxl
-                                                <input type="radio" id="xxxl" name="size" value="xxxl">
-                                            </label>
-                                        @endif
-                                        @if ($product->size->XXL > 0)
-                                            <label for="xxl">xxl
-                                                <input type="radio" id="xxl" name="size" value="xxl">
-                                            </label>
-                                        @endif
-                                        @if ($product->size->XL > 0)
-                                            <label for="xl">xl
-                                                <input type="radio" id="xl" name="size" value="xl">
-                                            </label>
-                                        @endif
-                                        @if ($product->size->L > 0)
-                                            <label for="l">l
-                                                <input type="radio" id="l" name="size" value="l">
-                                            </label>
-                                        @endif
-                                        @if ($product->size->M > 0)
-                                            <label for="m">m
-                                                <input type="radio" id="m" name="size" value="m">
-                                            </label>
-                                        @endif
-                                        @if ($product->size->S > 0)
-                                            <label for="s">s
-                                                <input type="radio" id="s" name="size" value="s">
-                                            </label>
-                                        @endif
-                                </div>
                             </div>
                             <div class="product__details__cart__option d-flex align-items-center justify-content-center">
                                 <div class="quantity">
@@ -131,11 +95,9 @@
                                     </div>
                                 </div>
                                 <button type="submit" class="primary-btn">Thêm vào giỏ hàng</button>
-                    </form>
+                                </form>
                             </div>
                             <div class="product__details__btns__option">
-
-
                                 <a style="cursor: pointer" onclick="add_heart({{ $product->id }})"><img
                                         src="{{ asset('storage/img/icon/heart.png') }}" alt=""
                                         id="Myheart_{{ $product->id }}" width="20">
@@ -145,16 +107,10 @@
                                         src="{{ asset('storage/img/icon/compare.png') }}" alt="" width="20">
                                 </a>
                             </div>
-                            <div style="width: 300px;margin: 0 auto">
-
-                                <div class="product-size-guide"><a data-toggle="modal" data-target="#size" style="cursor: pointer">Gợi ý tìm size</a></div>
-                            </div>
                             <div class="product__details__last__option">
-
                                 <ul>
                                     <li><span>SKU:</span> 2023{{ $product->id }}</li>
                                     <li><span>Dòng sản phẩm:</span> {{ $product->category->name }}</li>
-                                    <li><span>Thương hiệu:</span> {{ $product->brand->name }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -320,7 +276,7 @@
                                                 class="format-currency">{{ $relatedProduct->price }}đ</span></del></h5>
 
                                 </div>
-                                
+
                             </div>
                         </div>
                         <input type="hidden" value="{{ $relatedProduct->id }}">
@@ -354,7 +310,6 @@
         </script>
     @enderror
     <script>
-
         $(function() {
             $("#rateYo").rateYo({
                 rating: 0

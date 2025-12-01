@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-7">
                 <div class="header__top__left">
-                    <p>Chào xuân 2024, nhập Voucher MALEFASHION2024 để được giảm ngay 150.000</p>
+                    <p>Chào xuân 2025, nhập Voucher HighLands để được giảm ngay 150.000</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-5">
@@ -12,7 +12,6 @@
 
                     </div>
                     <div class="header__top__links">
-                        {{-- <a href="#">FAQs</a> --}}
                         @if (Auth::check())
                             <div class="header__top__hover">
                                 <span>Hi, {{ Auth::user()->username }} <i class="arrow_carrot-down"></i></span>
@@ -74,7 +73,7 @@
     </div>
     <div id="mobile-menu-wrap"></div>
     <div class="offcanvas__text">
-        <p>Chào xuân 2024, nhập Voucher MALEFASHION2024 để được giảm ngay 150.000.
+        <p>Chào xuân 2025, nhập Voucher HighLands để được giảm ngay 150.000đ.
 
         </p>
     </div>

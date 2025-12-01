@@ -33,27 +33,6 @@
                 </div>
                 <div class="card">
                     <div class="card-heading">
-                        <a data-toggle="collapse" data-target="#collapseTwo">Hãng sản phẩm</a>
-                    </div>
-                    <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <div class="shop__sidebar__brand">
-                                <ul>
-                                    <li><a href="{{ request()->fullUrlWithQuery(['brand' => '']) }}">Tất
-                                            cả</a>
-                                    </li>
-                                    @foreach ($brands as $brand)
-                                        <li><a class="{{ $brand->id == request()->input('brand') ? 'active' : '' }}"
-                                                href="{{ request()->fullUrlWithQuery(['brand' => $brand->id]) }}">{{ $brand->name }}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-heading">
                         <a data-toggle="collapse" data-target="#collapseThree">Giá</a>
                     </div>
                     <div id="collapseThree" class="collapse show" data-parent="#accordionExample">

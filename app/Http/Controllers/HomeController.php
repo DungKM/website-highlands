@@ -105,7 +105,7 @@ class HomeController extends Controller
         $comments = Comment::where('idProduct', $id)->with('user')->get();
         $countCommentUser = Comment::where('idProduct', $id)->where('idUser', optional(Auth::user())->id)->count();
         $averageRating = $product->averageRating();
-        $product->load('size', 'category', 'brand');
+        $product->load('category');
         $images = Image::where('idProduct', $id)->get();
 
         $productImage = $images->where('idProduct', $product->id)->first();
@@ -120,7 +120,7 @@ class HomeController extends Controller
             $order = null; // Đặt $order thành null nếu không có giỏ hàng
         }
 
-        $relatedProducts = Product::where('idCategory', $product->idCategory)->where('idBrand', $product->idBrand)->where('id', '<>', $product->id)->take(4)->get();
+        $relatedProducts = Product::where('idCategory', $product->idCategory)->where('id', '<>', $product->id)->take(4)->get();
         //gán ảnh
         foreach ($relatedProducts as $relatedProduct) {
             $relatedProduct->srcImage = Image::where('idProduct', $relatedProduct->id)->first()->srcImage;
