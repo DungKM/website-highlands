@@ -254,6 +254,153 @@
                         value="{{ URL::to('/detail-product/' . $product->id) }}">
                 @endforeach
             </div>
+            <div class="row" style="text-align: center">
+                <div class="col-lg-12">
+                    <div class="evo_block-product">
+                        <h2 class="sport-titles text-center">Cà phê rang xay</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                @foreach ($listProductCategory as $product)
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                        <div class="product__item sale">
+                            <div class="product__item__pic set-bg"
+                                data-setbg="{{ asset('storage/images/products/' . $product->image->srcImage) }}">
+                                {{-- <span class="label">Sale</span> --}}
+                                <ul class="product__hover">
+                                    <li><a style="cursor: pointer" onclick="add_heart({{ $product->id }})"><img
+                                                src="{{ asset('storage/img/icon/heart.png') }}" alt=""
+                                                id="Myheart_{{ $product->id }}">
+                                            <span>Yêu thích</span></a></li>
+                                    <li><a data-toggle="modal" data-target="#compare" style="cursor: pointer"
+                                            onclick="add_compare({{ $product->id }})"><img
+                                                src="{{ asset('storage/img/icon/compare.png') }}" alt="">
+                                            <span>So sánh</span></a></li>
+                                    <li><a href="{{ route('detailProduct', $product->id) }}"><img
+                                                src="{{ asset('storage/img/icon/search.png') }}" alt=""><span>Chi
+                                                tiết</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product__item__text">
+                                <h6>{{ $product->name }}</h6>
+                                <a href="{{ route('detailProduct', $product->id) }}" class="add-cart">+ Mua ngay</a>
+                                <h5>
+                                    <span class="format-currency">{{ $product->priceSale }}đ</span>
+                                    <del><span class="format-currency">{{ $product->price }}đ</span></del>
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" value="{{ $product->id }}">
+                    <input type="hidden" id="wishlist_name{{ $product->id }}" value="{{ $product->name }}">
+                    <input type="hidden" id="wishlist_image{{ $product->id }}"
+                        value="{{ URL::to('storage/images/products/' . $product->image->srcImage) }}">
+                    <input type="hidden" id="wishlist_pricesale{{ $product->id }}" value="{{ $product->priceSale }}">
+                    <input type="hidden" id="wishlist_price{{ $product->id }}" value="{{ $product->price }}">
+                    <input type="hidden" id="wishlist_url{{ $product->id }}"
+                        value="{{ URL::to('/detail-product/' . $product->id) }}">
+                @endforeach
+            </div>
+            <div class="row" style="text-align: center">
+                <div class="col-lg-12">
+                    <div class="evo_block-product">
+                        <h2 class="sport-titles text-center">Cà phê uống liền</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                @foreach ($listProductCategoryUongLien as $product)
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                        <div class="product__item sale">
+                            <div class="product__item__pic set-bg"
+                                data-setbg="{{ asset('storage/images/products/' . $product->image->srcImage) }}">
+                                {{-- <span class="label">Sale</span> --}}
+                                <ul class="product__hover">
+                                    <li><a style="cursor: pointer" onclick="add_heart({{ $product->id }})"><img
+                                                src="{{ asset('storage/img/icon/heart.png') }}" alt=""
+                                                id="Myheart_{{ $product->id }}">
+                                            <span>Yêu thích</span></a></li>
+                                    <li><a data-toggle="modal" data-target="#compare" style="cursor: pointer"
+                                            onclick="add_compare({{ $product->id }})"><img
+                                                src="{{ asset('storage/img/icon/compare.png') }}" alt="">
+                                            <span>So sánh</span></a></li>
+                                    <li><a href="{{ route('detailProduct', $product->id) }}"><img
+                                                src="{{ asset('storage/img/icon/search.png') }}" alt=""><span>Chi
+                                                tiết</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product__item__text">
+                                <h6>{{ $product->name }}</h6>
+                                <a href="{{ route('detailProduct', $product->id) }}" class="add-cart">+ Mua ngay</a>
+                                <h5>
+                                    <span class="format-currency">{{ $product->priceSale }}đ</span>
+                                    <del><span class="format-currency">{{ $product->price }}đ</span></del>
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" value="{{ $product->id }}">
+                    <input type="hidden" id="wishlist_name{{ $product->id }}" value="{{ $product->name }}">
+                    <input type="hidden" id="wishlist_image{{ $product->id }}"
+                        value="{{ URL::to('storage/images/products/' . $product->image->srcImage) }}">
+                    <input type="hidden" id="wishlist_pricesale{{ $product->id }}" value="{{ $product->priceSale }}">
+                    <input type="hidden" id="wishlist_price{{ $product->id }}" value="{{ $product->price }}">
+                    <input type="hidden" id="wishlist_url{{ $product->id }}"
+                        value="{{ URL::to('/detail-product/' . $product->id) }}">
+                @endforeach
+            </div>
+            <div class="row" style="text-align: center">
+                <div class="col-lg-12">
+                    <div class="evo_block-product">
+                        <h2 class="sport-titles text-center">Cà phê hạt</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                @foreach ($listProductCategoryHat as $product)
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-md-6 col-sm-6 mix new-arrivals">
+                        <div class="product__item sale">
+                            <div class="product__item__pic set-bg"
+                                data-setbg="{{ asset('storage/images/products/' . $product->image->srcImage) }}">
+                                {{-- <span class="label">Sale</span> --}}
+                                <ul class="product__hover">
+                                    <li><a style="cursor: pointer" onclick="add_heart({{ $product->id }})"><img
+                                                src="{{ asset('storage/img/icon/heart.png') }}" alt=""
+                                                id="Myheart_{{ $product->id }}">
+                                            <span>Yêu thích</span></a></li>
+                                    <li><a data-toggle="modal" data-target="#compare" style="cursor: pointer"
+                                            onclick="add_compare({{ $product->id }})"><img
+                                                src="{{ asset('storage/img/icon/compare.png') }}" alt="">
+                                            <span>So sánh</span></a></li>
+                                    <li><a href="{{ route('detailProduct', $product->id) }}"><img
+                                                src="{{ asset('storage/img/icon/search.png') }}" alt=""><span>Chi
+                                                tiết</span></a></li>
+                                </ul>
+                            </div>
+                            <div class="product__item__text">
+                                <h6>{{ $product->name }}</h6>
+                                <a href="{{ route('detailProduct', $product->id) }}" class="add-cart">+ Mua ngay</a>
+                                <h5>
+                                    <span class="format-currency">{{ $product->priceSale }}đ</span>
+                                    <del><span class="format-currency">{{ $product->price }}đ</span></del>
+                                </h5>
+
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" value="{{ $product->id }}">
+                    <input type="hidden" id="wishlist_name{{ $product->id }}" value="{{ $product->name }}">
+                    <input type="hidden" id="wishlist_image{{ $product->id }}"
+                        value="{{ URL::to('storage/images/products/' . $product->image->srcImage) }}">
+                    <input type="hidden" id="wishlist_pricesale{{ $product->id }}" value="{{ $product->priceSale }}">
+                    <input type="hidden" id="wishlist_price{{ $product->id }}" value="{{ $product->price }}">
+                    <input type="hidden" id="wishlist_url{{ $product->id }}"
+                        value="{{ URL::to('/detail-product/' . $product->id) }}">
+                @endforeach
+            </div>
         </div>
     </section>
     <!-- Product Section End -->
@@ -340,7 +487,7 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         <span>Tin Mới Nhất</span>
-                        <h2>Thời Trang Xu Hướng Mới</h2>
+                        <h2>Thông tin xu hướng mới</h2>
                     </div>
                 </div>
             </div>

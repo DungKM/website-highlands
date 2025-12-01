@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-blog set-bg" data-setbg="{{ asset('storage/img/breadcrumb-bg.jpg') }}" >
+    <section class="breadcrumb-blog set-bg-crumb" style="background-image: url({{ asset('storage/img/ABOUT-CAREER3.png') }})" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

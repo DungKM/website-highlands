@@ -21,16 +21,27 @@ class HomeController extends Controller
     public function home()
     {
         $banners = Banner::get();
-        $products = Product::orderByDesc('view')->limit(8)->get();
+        $products = Product::orderByDesc('view')->limit(4)->get();
+        $listProductCategory = Product::where('idCategory', 11)
+                                 ->orderByDesc('view')
+                                 ->limit(8)
+                                 ->get();
+        $listProductCategoryUongLien = Product::where('idCategory', 13)
+                                 ->orderByDesc('view')
+                                 ->limit(8)
+                                 ->get();
+        $listProductCategoryHat = Product::where('idCategory', 12)
+                                 ->orderByDesc('view')
+                                 ->limit(8)
+                                 ->get();
         $blogs = Blog::select('id', 'title', 'created_at')
             ->with(['image' => function ($query) {
                 $query->select('id', 'idBlog', 'srcImage');
             }])
-            ->orderBy('created_at', 'desc') // Order by creation date in descending order
+            ->orderBy('created_at', 'desc') 
             ->limit(3)
             ->get();
         $images = Image::all();
-        //Lấy ra ảnh đầu tiên làm ảnh đại diện cho sản phẩm
         foreach ($products as $product) {
             foreach ($images as $image) {
                 if ($image->idProduct == $product->id) {
@@ -39,7 +50,31 @@ class HomeController extends Controller
                 }
             }
         }
-        return view('index', compact('banners', 'products', 'blogs'));
+        foreach ($listProductCategory as $product) { // 👈 Lặp qua danh sách mới
+        foreach ($images as $image) {
+            if ($image->idProduct == $product->id) {
+                $product->image = $image;
+                break;
+            }
+        }
+    }
+        foreach ($listProductCategoryUongLien as $product) { // 👈 Lặp qua danh sách mới
+        foreach ($images as $image) {
+            if ($image->idProduct == $product->id) {
+                $product->image = $image;
+                break;
+            }
+        }
+    }
+        foreach ($listProductCategoryHat as $product) { // 👈 Lặp qua danh sách mới
+        foreach ($images as $image) {
+            if ($image->idProduct == $product->id) {
+                $product->image = $image;
+                break;
+            }
+        }
+    }
+        return view('index', compact('banners', 'products', 'blogs', 'listProductCategory','listProductCategoryUongLien','listProductCategoryHat'));
     }
 
 

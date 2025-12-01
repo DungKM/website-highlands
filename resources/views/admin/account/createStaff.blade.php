@@ -127,31 +127,6 @@
                                             </div>
                                         </div>
                                         <div class="col-2">
-                                            Thương hiệu <br>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault" name="showBrand">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">Hiển
-                                                    thị</label>
-                                            </div>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault" name="addBrand">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">Thêm</label>
-                                            </div>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault" name="updateBrand">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">Cập
-                                                    nhật</label>
-                                            </div>
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault" name="deleteBrand">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault">Xóa</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-2">
                                             Sản phẩm <br>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox"
@@ -177,7 +152,7 @@
                                             </div>
                                         </div>
                                         <div class="col-2">
-                                            Banner <br>
+                                            Sliders <br>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox"
                                                     id="flexSwitchCheckDefault" name="showBanner">
@@ -202,7 +177,7 @@
                                             </div>
                                         </div>
                                         <div class="col-2">
-                                            Voucher <br>
+                                            Vouchers <br>
                                             <div class="form-check form-switch">
                                                 <input class="form-check-input" type="checkbox"
                                                     id="flexSwitchCheckDefault" name="showVoucher">

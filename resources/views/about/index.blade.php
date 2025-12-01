@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
-                        <h4>Giới thiệu</h4>
+                        <h4>Giới thiệu HighLands</h4>
                         <div class="breadcrumb__links">
                             <a href="/">Trang chủ</a>
                             <span>Giới thiệu</span>
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="about__pic">
-                        <img src="{{ asset('storage/img/about/about-us.jpg') }}" alt="">
+                        <img src="{{ asset('storage/img/about/DUY_166_1.jpg') }}" alt="">
                     </div>
                 </div>
             </div>

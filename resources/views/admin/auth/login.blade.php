@@ -22,7 +22,7 @@ data-sidebar-position="fixed" data-header-position="fixed">
         <div class="card mb-0">
             <div class="card-body">
             <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                <img src="{{ asset('storage/img/logo.png') }}" width="180" alt="">
+                <img src="{{ asset('storage/images/logo.webp') }}" width="180" alt="">
             </a>
             <p class="text-center">Your Social Campaigns</p>
             <form action="{{ route('adminLogin') }}" method="POST">

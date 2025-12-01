@@ -35,7 +35,7 @@
             <div>
                 <div class="brand-logo d-flex align-items-center justify-content-between">
                     <a href="{{ route('home') }}" class="text-nowrap logo-img">
-                        <img src="{{ asset('storage/img/logo.png') }}" width="180" alt="" />
+                        <img src="{{ asset('storage/images/logo.webp') }}" width="180" alt="" />
                     </a>
                     <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
                         <i class="ti ti-x fs-8"></i>
@@ -53,7 +53,7 @@
                                 <span>
                                     <i class="ti ti-layout-dashboard"></i>
                                 </span>
-                                <span class="hide-menu">Dashboard</span>
+                                <span class="hide-menu">Thống kê</span>
                             </a>
                         </li>
                         <li class="nav-small-cap">
@@ -76,11 +76,11 @@
                                     <span>
                                         <i class="fa-solid fa-list"></i>
                                     </span>
-                                    <span class="hide-menu">Phân loại</span>
+                                    <span class="hide-menu">Phân loại cà phê</span>
                                 </a>
                             </li>
                         @endcan
-                        @can('showBrand')
+                        {{-- @can('showBrand')
                             <li class="sidebar-item">
                                 <a class="sidebar-link" href="{{ route('brand.index') }}" aria-expanded="false">
                                     <span>
@@ -89,12 +89,12 @@
                                     <span class="hide-menu">Thương hiệu</span>
                                 </a>
                             </li>
-                        @endcan
+                        @endcan --}}
                         @can('showProduct')
                             <li class="sidebar-item">
                                 <a class="sidebar-link" href="{{ route('product.index') }}" aria-expanded="false">
                                     <span>
-                                        <i class="fa-solid fa-shirt"></i>
+                                        <i class="fa-solid fa-copyright"></i>
                                     </span>
                                     <span class="hide-menu">Sản phẩm</span>
                                 </a>
@@ -106,7 +106,7 @@
                                     <span>
                                         <i class="fa-solid fa-rectangle-ad"></i>
                                     </span>
-                                    <span class="hide-menu">Banner</span>
+                                    <span class="hide-menu">Sliders</span>
                                 </a>
                             </li>
                         @endcan
@@ -116,7 +116,7 @@
                                     <span>
                                         <i class="ti ti-article"></i>
                                     </span>
-                                    <span class="hide-menu">Blog</span>
+                                    <span class="hide-menu">Trang Blog</span>
                                 </a>
                             </li>
                         @endcan
@@ -126,7 +126,7 @@
                                     <span>
                                         <i class="fa-brands fa-salesforce"></i>
                                     </span>
-                                    <span class="hide-menu">Voucher</span>
+                                    <span class="hide-menu">Vouchers</span>
                                 </a>
                             </li>
                         @endcan
@@ -140,7 +140,7 @@
                         </li>
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-                            <span class="hide-menu">PHÂN QUYỀN</span>
+                            <span class="hide-menu">PHÂN QUYỀN HỆ THỐNG</span>
                         </li>
 
                         @if (Auth::user()->role == 1)

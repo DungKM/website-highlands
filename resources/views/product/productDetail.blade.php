@@ -89,12 +89,15 @@
                             <div class="product__details__option">
                             </div>
                             <div class="product__details__cart__option d-flex align-items-center justify-content-center">
-                                <div class="quantity">
-                                    <div class="pro-qty">
-                                        <input type="text" value="1" name="qty">
+                                <form action="{{ route('addToCart', $product->id) }}" method="post">
+                                    @csrf
+                                    @method('POST')
+                                    <div class="quantity">
+                                        <div class="pro-qty">
+                                            <input type="text" value="1" name="qty">
+                                        </div>
                                     </div>
-                                </div>
-                                <button type="submit" class="primary-btn">Thêm vào giỏ hàng</button>
+                                    <button type="submit" class="primary-btn">Thêm vào giỏ hàng</button>
                                 </form>
                             </div>
                             <div class="product__details__btns__option">
